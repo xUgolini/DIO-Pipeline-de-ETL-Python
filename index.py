@@ -2,12 +2,12 @@ import pandas as pd
 import requests
 import json
 import openai
+from openaiAPIKey import openai_api_key
 
 df = pd.read_csv("SDW2023.csv")
 user_ids = df["UserID"].to_list()
 
 sdw2023_api_url = "https://sdw-2023-prd.up.railway.app"
-openai_api_key = "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"
 openai.api_key = openai_api_key
 
 
